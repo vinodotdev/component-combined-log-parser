@@ -1,0 +1,10 @@
+namespace "parser"
+
+type Inputs {
+  log_entry: string,
+  log_format: string
+}
+
+type Outputs {
+  log_message: struct
+}

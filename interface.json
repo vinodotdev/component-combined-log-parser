@@ -1,0 +1,22 @@
+{
+  "name": "combined-log-parser",
+  "types": {},
+  "components": {
+    "parser": {
+      "name": "parser",
+      "inputs": {
+        "log_entry": {
+          "type": "string"
+        },
+        "log_format": {
+          "type": "string"
+        }
+      },
+      "outputs": {
+        "log_message": {
+          "type": "struct"
+        }
+      }
+    }
+  }
+}
