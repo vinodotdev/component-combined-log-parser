@@ -22,3 +22,6 @@ $ make clean && make codegen
 $ make test
 ```
 
+```
+vow run ./build/text_log_parser_s.wasm --trace parser -- --log_format='"$remote_addr - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\""' --log_entry='"135.125.244.48 - - [15/Apr/2022:15:15:35 +0000] \"GET /.env HTTP/1.1\" 404 1371 \"-\" \"Crazy User Agent\""' --field_seperator='" "'
+```
