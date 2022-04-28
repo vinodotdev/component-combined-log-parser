@@ -1,5 +1,5 @@
 [package]
-name = "combined-log-parser"
+name = "text-log-parser"
 version = "0.1.0"
 description = ""
 authors = ["Fawad Shaikh <fawad@vino.dev>"]
@@ -16,6 +16,6 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 vino-provider = { version = "0.9", features = ["wasm"] }
 #combined log parsing lib
-combined-log-parser = { version = "0.2.1", git="https://github.com/vinodotdev/combined-log-parser"}
+text-log-parser = { version = "0.2.0", git="https://github.com/vinodotdev/text-log-parser"}
 
 [dev-dependencies]

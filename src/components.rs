@@ -93,6 +93,7 @@ pub mod generated {
             Ok(Inputs {
                 log_entry: deserialize(payload.get("log_entry")?)?,
                 log_format: deserialize(payload.get("log_format")?)?,
+                field_seperator: deserialize(payload.get("field_seperator")?)?,
             })
         }
 
@@ -101,6 +102,10 @@ pub mod generated {
                 let mut map = TransportMap::new();
                 map.insert("log_entry", MessageTransport::success(&inputs.log_entry));
                 map.insert("log_format", MessageTransport::success(&inputs.log_format));
+                map.insert(
+                    "field_seperator",
+                    MessageTransport::success(&inputs.field_seperator),
+                );
                 map
             }
         }
@@ -111,6 +116,8 @@ pub mod generated {
             pub log_entry: String,
             #[serde(rename = "log_format")]
             pub log_format: String,
+            #[serde(rename = "field_seperator")]
+            pub field_seperator: String,
         }
 
         #[derive(Debug)]

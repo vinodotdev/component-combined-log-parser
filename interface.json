@@ -1,5 +1,5 @@
 {
-  "name": "combined-log-parser",
+  "name": "text-log-parser",
   "types": {},
   "components": {
     "parser": {
@@ -9,6 +9,9 @@
           "type": "string"
         },
         "log_format": {
+          "type": "string"
+        },
+        "field_seperator": {
           "type": "string"
         }
       },

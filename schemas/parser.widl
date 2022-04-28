@@ -2,7 +2,8 @@ namespace "parser"
 
 type Inputs {
   log_entry: string,
-  log_format: string
+  log_format: string,
+  field_seperator: string
 }
 
 type Outputs {
