@@ -1,5 +1,13 @@
 {
   "name": "text-log-parser",
+  "features": {
+    "stateful": false,
+    "streaming": false,
+    "version": 0
+  },
+  "version": "0.1.0",
+  "format": 1,
+  "wellknown": [],
   "types": {},
   "components": {
     "parser": {
@@ -17,9 +25,22 @@
       },
       "outputs": {
         "log_message": {
-          "type": "struct"
+          "type": "map",
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
         }
       }
+    }
+  },
+  "config": {
+    "parser": {
+      "type": "struct",
+      "name": "Config",
+      "fields": {}
     }
   }
 }

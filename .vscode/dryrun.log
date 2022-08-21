@@ -1,0 +1,14 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/fshaikh/Developer/component-text-log-parser/component-text-log-parser'
+wasmflow-codegen json interface "text-log-parser" ./schemas -o interface.json -f
+wasmflow-codegen rust integration ./interface.json   -f -o src/components.rs
+mkdir -p ./src/components
+wasmflow-codegen rust component ./interface.json --all   -o ./src/components
+cargo +nightly fmt
+mkdir -p build/
+cargo build --target wasm32-unknown-unknown --release
+cp /Users/fshaikh/Developer/component-text-log-parser/component-text-log-parser/target/wasm32-unknown-unknown/release/text_log_parser.wasm build//
+wafl wasm sign build//text_log_parser.wasm ./interface.json --ver=0.1.0 --rev=0
+echo Signed artifacts located at: $(ls build/*signed*)
+make: Leaving directory `/Users/fshaikh/Developer/component-text-log-parser/component-text-log-parser'
+ 

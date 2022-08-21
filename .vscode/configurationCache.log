@@ -1,0 +1,1 @@
+{"buildTargets":["all","build","check","clean","codegen","debug","doc","help","interface.json","src/components.rs","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

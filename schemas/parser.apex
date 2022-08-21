@@ -7,5 +7,9 @@ type Inputs {
 }
 
 type Outputs {
-  log_message: struct
+  log_message: {string:string}
+}
+
+type Config {
+
 }

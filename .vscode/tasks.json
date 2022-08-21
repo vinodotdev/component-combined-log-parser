@@ -5,25 +5,15 @@
       "label": "Cargo: Build Native",
       "type": "shell",
       "command": "cargo",
-      "args": [
-        "build"
-      ],
-      "problemMatcher": [
-        "$rustc"
-      ]
+      "args": ["build"],
+      "problemMatcher": ["$rustc"]
     },
     {
       "label": "Cargo: Build WASM",
       "type": "shell",
       "command": "cargo",
-      "args": [
-        "build",
-        "--target",
-        "wasm32-unknown-unknown"
-      ],
-      "problemMatcher": [
-        "$rustc"
-      ]
+      "args": ["build", "--target", "wasm32-unknown-unknown"],
+      "problemMatcher": ["$rustc"]
     }
   ]
 }
